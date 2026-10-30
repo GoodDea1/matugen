@@ -1,0 +1,80 @@
+[config]
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/colors.lua'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/themes/Matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+
+[templates.nvim]
+input_path = '~/.config/matugen/templates/nvim-colors.vim'
+output_path = '~/.config/nvim/colors/matugen.vim'
+post_hook = 'pkill -SIGUSR1 nvim'
+
+[templates.neovim]
+input_path = "~/.config/matugen/templates/nvim-colors.json"
+output_path = "~/.config/matugen/themes/nvim-colors.json"
+post_hook = "pkill -SIGUSR1 nvim"
+
+[templates.kvantum_kvconfig]
+input_path = '~/.config/matugen/templates/kvantum-colors.kvconfig'
+output_path = '~/.config/Kvantum/matugen/matugen.kvconfig'
+
+[templates.kvantum_svg]
+input_path = '~/.config/matugen/templates/kvantum-colors.svg'
+output_path = '~/.config/Kvantum/matugen/matugen.svg'
+
+[templates.qt5ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt5ct/colors/matugen.conf'
+
+[templates.qt6ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'
+
+[templates.color-scheme]
+input_path = '~/.config/matugen/templates/qt.colors'
+output_path = '~/.local/share/color-schemes/Matugen.colors'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+post_hook = '~/.config/matugen/post-hook-scripts/gtk-themes-reload.sh'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/your-theme'
+post_hook = 'pkill -USR1 cava'
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+[templates.rmpc]
+input_path = '~/.config/matugen/templates/rmpc.ron'
+output_path = '~/.config/rmpc/themes/matugen.ron'
+
+[templates.heroic]
+input_path = '~/.config/matugen/templates/heroic.css'
+output_path = '~/.config/heroic/themes/matugen.css'
+
+[templates.prismlauncher]
+input_path = '~/.config/matugen/templates/prismlauncher.json'
+output_path = '~/.local/share/PrismLauncher/themes/Matugen/theme.json'
+
+ [templates.firefox-website-colors]
+ input_path = "~/.config/matugen/templates/firefox-colors.css"
+ output_path = "~/.config/mozilla/firefox/k5urtdwd.default-release-1/chrome/colors.css"
